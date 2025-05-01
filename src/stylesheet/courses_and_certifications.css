@@ -1,0 +1,74 @@
+.courses {
+    background-color: #f1f1f1;
+    padding: 47px 20px;
+    /* max-width: 1100px; */
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .courses h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .certifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .certification-item {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    border-left: 6px solid #007acc;
+  }
+  
+  .certification-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .certification-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #007acc;
+  }
+  
+  .certification-item p {
+    margin: 5px 0 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .certification-item a {
+    font-weight: bold;
+    color: #007acc;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s;
+  }
+  
+  .certification-item a:hover {
+    border-bottom: 1px solid #007acc;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .certification-item {
+      padding: 16px 18px;
+    }
+  
+    .certification-item h3 {
+      font-size: 1rem;
+    }
+  
+    .certification-item p {
+      font-size: 0.95rem;
+    }
+  }
+  
