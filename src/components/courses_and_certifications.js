@@ -12,7 +12,7 @@ const CoursesAndCertifications = () => {
             <h3>{item.platform}</h3>
             <p>{item.course}</p>
             <a href={item.link} target="_blank" rel="noopener noreferrer">
-              View Certification
+              View Certification →
             </a>
           </div>
         ))}

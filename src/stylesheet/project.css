@@ -1,59 +1,134 @@
 .projects {
-    background-color: #f1f1f1;
-    padding: 47px 20px;
-    /* max-width: 1100px; */
-    margin: auto;
+  background: linear-gradient(135deg, #ffffff, #f1f1f1); /* Light gradient for modern look */
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-out;
+}
+
+.projects h2 {
+  text-align: center;
+  color: #000; /* Black for modern contrast */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  animation: slideDown 0.8s ease forwards;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  color: #000; /* Black for project titles */
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #333; /* Dark gray for better readability */
+}
+
+.project-card h4 {
+  color: #000; /* Black for subheadings */
+  margin-bottom: 10px;
+}
+
+.project-card ul {
+  list-style-type: none; /* Removing default bullets */
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.project-card li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333; /* Dark gray for list items */
+  position: relative; /* To position custom bullet */
+  margin-bottom: 15px;
+  padding-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.project-card li::before {
+  content: "\2022"; /* Custom bullet */
+  font-size: 1.5rem;
+  color: #007acc; /* Soft blue for bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.project-card li:hover {
+  color: #000; /* Black for hover effect on list items */
+}
+
+.project-card li:hover::before {
+  color: #ffcc00; /* Change bullet color on hover */
+  transform: scale(1.2); /* Slight scaling effect */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
   .projects h2 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 40px;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    font-size: 2rem;
   }
   
   .project-card {
-    background: #fff;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
   }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-card h3 {
-    margin-top: 0;
-    color: #007acc;
-    font-size: 1.2rem;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .project-card h4 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  .project-card ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
+
   .project-card li {
     font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555;
+    line-height: 1.5;
   }
-  
+}

@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+/* Add general padding and margin between sections */
+.section {
+  margin-bottom: 40px; /* Adjust this to the space you want between sections */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* You can also target specific sections if needed */
+.profile {
+  padding: 40px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.about {
+  padding: 40px 20px;
+}
+
+.project {
+  padding: 40px 20px;
+}
+
+.skills {
+  padding: 40px 20px;
+}
+
+.courses {
+  padding: 40px 20px;
+}
+
+.contact {
+  padding: 40px 20px;
+}
+
+.footer-contact {
+  padding: 40px 20px;
+}
+
+/* Add extra space for smaller screens (Responsive Design) */
+@media (max-width: 768px) {
+  .section {
+    margin-bottom: 30px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  
+  .profile, .about, .project, .skills, .courses, .contact, .footer-contact {
+    padding: 20px;
   }
 }

@@ -15,7 +15,7 @@ const skillsData = [
     },
     {
       category: "Version Control",
-      items: ["Git", "Proficient in Git commands"]
+      items: ["Git", "Github"]
     },
     {
       category: "APIs",

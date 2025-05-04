@@ -9,7 +9,7 @@ const footerData = {
     linkedin: "https://www.linkedin.com/in/kiran-kumar-s22",
     gmail: "mailto:s.kirankumar.0210@gmail.com"
   },
-  navLinks: ["About", "Skills", "Experience", "Contact"],
+  navLinks: ["About" ,"Projects","Skills","Courses","Contact"],
   contact: {
     email: "s.kirankumar.0210@gmail.com",
     whatsapp: "+91 6374254533"
